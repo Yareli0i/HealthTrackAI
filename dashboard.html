@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Панель управління HealthTrack AI - ваші показники здоров'я">
+    <title>Дашборд - HealthTrack AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page-wrapper dashboard-page">
+    <header class="header">
+        <div class="container">
+            <a href="dashboard.html" class="logo">
+                <img src="images/logo.svg" alt="HealthTrack AI Logo">
+                <span>HealthTrack AI</span>
+            </a>
+            <button class="menu-toggle" aria-label="Відкрити меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="dashboard.html" class="nav-link active">Дашборд</a></li>
+                    <li><a href="add-data.html" class="nav-link">Додати дані</a></li>
+                    <li><a href="history.html" class="nav-link">Історія</a></li>
+                    <li><a href="profile.html" class="nav-link">Профіль</a></li>
+                    <li><a href="index.html" class="nav-link">Вийти</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="dashboard-main">
+        <div class="container">
+            <div class="dashboard-header">
+                <div class="welcome-message">
+                    <h1>Вітаємо, Олександре! 👋</h1>
+                    <p>Ось ваші показники здоров'я за сьогодні</p>
+                </div>
+                <a href="add-data.html" class="btn btn-primary">+ Додати дані</a>
+            </div>
+
+            <section class="stats-grid" aria-label="Статистика здоров'я">
+                <article class="stat-card">
+                    <div class="stat-icon pulse">
+                        <img src="images/icon-heart.svg" alt="Пульс">
+                    </div>
+                    <div class="stat-content">
+                        <h3>Пульс</h3>
+                        <p class="stat-value font-data">72 <span>уд/хв</span></p>
+                        <p class="stat-status good">В нормі</p>
+                    </div>
+                </article>
+                
+                <article class="stat-card">
+                    <div class="stat-icon steps">
+                        <img src="images/icon-steps.svg" alt="Кроки">
+                    </div>
+                    <div class="stat-content">
+                        <h3>Кроки</h3>
+                        <p class="stat-value font-data">8,450</p>
+                        <p class="stat-status warning">85% від цілі</p>
+                    </div>
+                </article>
+                
+                <article class="stat-card">
+                    <div class="stat-icon sleep">
+                        <img src="images/icon-sleep.svg" alt="Сон">
+                    </div>
+                    <div class="stat-content">
+                        <h3>Сон</h3>
+                        <p class="stat-value font-data">7.5 <span>год</span></p>
+                        <p class="stat-status good">Відмінно</p>
+                    </div>
+                </article>
+                
+                <article class="stat-card">
+                    <div class="stat-icon weight">
+                        <img src="images/icon-weight.svg" alt="Вага">
+                    </div>
+                    <div class="stat-content">
+                        <h3>Вага</h3>
+                        <p class="stat-value font-data">75.2 <span>кг</span></p>
+                        <p class="stat-status good">-0.3 кг</p>
+                    </div>
+                </article>
+                
+                <article class="stat-card">
+                    <div class="stat-icon mood">
+                        <img src="images/icon-mood.svg" alt="Настрій">
+                    </div>
+                    <div class="stat-content">
+                        <h3>Настрій</h3>
+                        <p class="stat-value" style="font-size:2rem">😊</p>
+                        <p class="stat-status good">Гарний</p>
+                    </div>
+                </article>
+            </section>
+
+            <section class="dashboard-charts">
+                <article class="chart-card">
+                    <h2>Динаміка пульсу</h2>
+                    <div class="chart-placeholder">
+                        <img src="images/chart-pulse.png" alt="Графік пульсу за тиждень">
+                    </div>
+                </article>
+                
+                <article class="chart-card">
+                    <h2>Кроки за тиждень</h2>
+                    <div class="chart-placeholder">
+                        <img src="images/chart-steps.png" alt="Графік кроків за тиждень">
+                    </div>
+                </article>
+            </section>
+
+            <section class="recommendations">
+                <h2>💡 Рекомендації</h2>
+                <div class="recommendations-list">
+                    <article class="recommendation-item">
+                        <img src="images/icon-tip.svg" alt="Порада">
+                        <p>Пройдіть ще <strong>1,550 кроків</strong> для досягнення денної цілі</p>
+                    </article>
+                    <article class="recommendation-item success">
+                        <img src="images/icon-check.svg" alt="Успіх">
+                        <p>Чудово! Ваш сон був у нормі цієї ночі</p>
+                    </article>
+                    <article class="recommendation-item">
+                        <img src="images/icon-tip.svg" alt="Порада">
+                        <p>Спробуйте випити склянку води протягом наступної години</p>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 HealthTrack AI. Всі права захищено.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

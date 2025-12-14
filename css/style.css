@@ -1,0 +1,290 @@
+/* ============================================
+   STYLE.CSS - Головний файл стилів
+   HealthTrack AI
+   
+   Структура CSS (модульний підхід):
+   1. base.css      - змінні, reset, типографіка
+   2. layout.css    - Grid, Flexbox, структура
+   3. components.css - кнопки, картки, форми
+   4. responsive.css - медіазапити, адаптивність
+   ============================================ */
+
+/* === Imports === */
+@import url('base.css');
+@import url('layout.css');
+@import url('components.css');
+@import url('responsive.css');
+
+/* === Page-Specific Styles === */
+
+/* About Page */
+.about-content {
+    padding: var(--space-2xl) 0;
+}
+
+.about-section {
+    margin-bottom: var(--space-2xl);
+}
+
+.about-section h2 {
+    color: var(--color-primary);
+    margin-bottom: var(--space-lg);
+}
+
+.about-list li,
+.tech-list li {
+    position: relative;
+    padding-left: var(--space-lg);
+    margin-bottom: var(--space-sm);
+}
+
+.about-list li::before,
+.tech-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--color-success);
+    font-weight: bold;
+}
+
+.problems-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-lg);
+}
+
+.problem-card {
+    background-color: var(--color-bg-gray);
+    padding: var(--space-lg);
+    border-radius: var(--radius-lg);
+    border-left: 4px solid var(--color-primary);
+}
+
+.problem-card h3 {
+    font-size: 1.125rem;
+    margin-bottom: var(--space-sm);
+    color: var(--color-primary);
+}
+
+/* Contacts Page */
+.contacts-content {
+    padding: var(--space-2xl) 0;
+}
+
+.contacts-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: var(--space-2xl);
+}
+
+.contact-info h2,
+.contact-form-wrapper h2 {
+    margin-bottom: var(--space-xl);
+}
+
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+}
+
+.contact-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-md);
+}
+
+.contact-list img {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.contact-list h3 {
+    font-size: 1rem;
+    margin-bottom: var(--space-xs);
+}
+
+.contact-list p,
+.contact-list a {
+    color: var(--color-text-light);
+    font-size: 0.9375rem;
+    margin-bottom: 0;
+}
+
+.contact-form-wrapper {
+    background-color: var(--color-bg-gray);
+    padding: var(--space-xl);
+    border-radius: var(--radius-lg);
+}
+
+/* Legal/Privacy Pages */
+.legal-content {
+    padding: var(--space-2xl) 0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.legal-section {
+    margin-bottom: var(--space-2xl);
+}
+
+.legal-section h2 {
+    font-size: 1.25rem;
+    margin-bottom: var(--space-md);
+    color: var(--color-primary);
+}
+
+.legal-section p {
+    margin-bottom: var(--space-md);
+}
+
+.legal-section ul {
+    padding-left: var(--space-lg);
+    margin-top: var(--space-sm);
+}
+
+.legal-section li {
+    position: relative;
+    padding-left: var(--space-md);
+    margin-bottom: var(--space-sm);
+}
+
+.legal-section li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--color-primary);
+}
+
+/* History Page */
+.history-filters {
+    display: flex;
+    gap: var(--space-lg);
+    margin-bottom: var(--space-xl);
+    flex-wrap: wrap;
+}
+
+.history-charts {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+    margin-bottom: var(--space-xl);
+}
+
+.history-table {
+    background-color: var(--color-bg);
+    padding: var(--space-lg);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.history-table h2 {
+    font-size: 1.125rem;
+    margin-bottom: var(--space-lg);
+}
+
+/* Dashboard Charts Grid */
+.dashboard-charts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: var(--space-lg);
+    margin-bottom: var(--space-xl);
+}
+
+/* Page Header (внутрішні сторінки дашборду) */
+.page-header {
+    margin-bottom: var(--space-xl);
+}
+
+.page-header h1 {
+    font-size: 1.75rem;
+    margin-bottom: var(--space-xs);
+}
+
+.page-header p {
+    margin-bottom: 0;
+}
+
+/* === Animation Classes === */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.animate-slide-up {
+    animation: slideUp 0.5s ease forwards;
+}
+
+/* === Loading State === */
+.loading {
+    position: relative;
+    pointer-events: none;
+}
+
+.loading::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    margin: -12px 0 0 -12px;
+    border: 3px solid var(--color-primary-light);
+    border-top-color: var(--color-primary);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* === Tooltip === */
+[data-tooltip] {
+    position: relative;
+}
+
+[data-tooltip]::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: var(--space-xs) var(--space-sm);
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-white);
+    font-size: 0.75rem;
+    border-radius: var(--radius-sm);
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--transition-fast);
+    z-index: var(--z-tooltip);
+}
+
+[data-tooltip]:hover::after {
+    opacity: 1;
+    visibility: visible;
+    bottom: calc(100% + 8px);
+}

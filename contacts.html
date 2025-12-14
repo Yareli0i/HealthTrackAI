@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Зв'яжіться з командою HealthTrack AI">
+    <title>Контакти - HealthTrack AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page-wrapper">
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo"><img src="images/logo.svg" alt=""><span>HealthTrack AI</span></a>
+            <button class="menu-toggle" aria-label="Меню"><span></span><span></span><span></span></button>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Головна</a></li>
+                    <li><a href="about.html" class="nav-link">Про проєкт</a></li>
+                    <li><a href="contacts.html" class="nav-link active">Контакти</a></li>
+                    <li><a href="login.html" class="nav-link">Увійти</a></li>
+                    <li><a href="register.html" class="nav-link btn btn-primary">Реєстрація</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <h1>Контакти</h1>
+                <p>Маєте питання? Ми завжди раді допомогти</p>
+            </div>
+        </section>
+
+        <section class="contacts-content">
+            <div class="container">
+                <div class="contacts-grid">
+                    <div class="contact-info">
+                        <h2>Наші контакти</h2>
+                        <ul class="contact-list">
+                            <li>
+                                <img src="images/icon-email.svg" alt="">
+                                <div><h3>Email</h3><a href="mailto:support@healthtrack.ai">support@healthtrack.ai</a></div>
+                            </li>
+                            <li>
+                                <img src="images/icon-location.svg" alt="">
+                                <div><h3>Адреса</h3><p>м. Київ, вул. Політехнічна, 14</p></div>
+                            </li>
+                            <li>
+                                <img src="images/icon-time.svg" alt="">
+                                <div><h3>Графік роботи</h3><p>Пн-Пт: 9:00 - 18:00</p></div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="contact-form-wrapper">
+                        <h2>Напишіть нам</h2>
+                        <form class="contact-form" action="#" method="POST" novalidate>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Ім'я</label>
+                                    <input type="text" id="name" name="name" class="form-control" class="form-control" placeholder="Ваше ім'я" required>
+                                    <span class="error-message"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" name="email" class="form-control" class="form-control" placeholder="your@email.com" required>
+                                    <span class="error-message"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Тема</label>
+                                <select id="subject" name="subject" class="form-control" required>
+                                    <option value="">Оберіть тему</option>
+                                    <option value="general">Загальне питання</option>
+                                    <option value="support">Технічна підтримка</option>
+                                    <option value="feedback">Відгук</option>
+                                    <option value="partnership">Співпраця</option>
+                                </select>
+                                <span class="error-message"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Повідомлення</label>
+                                <textarea id="message" name="message" class="form-control" class="form-control" rows="5" placeholder="Ваше повідомлення..." required></textarea>
+                                <span class="error-message"></span>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-lg">Надіслати</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand"><a href="index.html" class="logo"><img src="images/logo.svg" alt=""><span>HealthTrack AI</span></a><p>Цифровий щоденник здоров'я</p></div>
+                <nav class="footer-nav"><h3>Навігація</h3><ul><li><a href="index.html">Головна</a></li><li><a href="about.html">Про проєкт</a></li></ul></nav>
+                <nav class="footer-nav"><h3>Правова інформація</h3><ul><li><a href="privacy.html">Конфіденційність</a></li></ul></nav>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2025 HealthTrack AI</p></div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

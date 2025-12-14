@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Налаштування профілю в HealthTrack AI">
+    <title>Профіль — HealthTrack AI</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body class="dashboard-page">
+    <header class="header header-dashboard">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.svg" alt="HealthTrack AI логотип" width="40" height="40">
+                <span>HealthTrack AI</span>
+            </a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="dashboard.html" class="nav-link">Дашборд</a></li>
+                    <li><a href="add-data.html" class="nav-link">Додати дані</a></li>
+                    <li><a href="history.html" class="nav-link">Історія</a></li>
+                    <li><a href="profile.html" class="nav-link active">Профіль</a></li>
+                    <li><a href="index.html" class="nav-link">Вийти</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="dashboard-main">
+        <div class="container">
+            <section class="page-header">
+                <h1>Налаштування профілю</h1>
+                <p>Керуйте вашими особистими даними та налаштуваннями</p>
+            </section>
+
+            <div class="profile-layout">
+                <aside class="profile-sidebar">
+                    <div class="profile-avatar">
+                        <img src="images/avatar-placeholder.png" alt="Аватар користувача" width="120" height="120">
+                        <button class="btn btn-secondary btn-small">Змінити фото</button>
+                    </div>
+                    <nav class="profile-nav">
+                        <ul>
+                            <li><a href="#personal" class="active">Особисті дані</a></li>
+                            <li><a href="#settings">Налаштування</a></li>
+                            <li><a href="#security">Безпека</a></li>
+                            <li><a href="#delete">Видалення акаунту</a></li>
+                        </ul>
+                    </nav>
+                </aside>
+
+                <div class="profile-content">
+                    <form class="profile-form" action="#" method="POST">
+                        <section id="personal" class="form-card">
+                            <h2>Особисті дані</h2>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstname">Ім'я</label>
+                                    <input type="text" id="firstname" name="firstname" class="form-control" value="Олександр" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastname">Прізвище</label>
+                                    <input type="text" id="lastname" name="lastname" class="form-control" value="Дзюба" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" class="form-control" value="o.dziuba@example.com" required>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="birthdate">Дата народження</label>
+                                    <input type="date" id="birthdate" name="birthdate" class="form-control" value="2003-05-15">
+                                </div>
+                                <div class="form-group">
+                                    <label for="gender">Стать</label>
+                                    <select id="gender" name="gender" class="form-control">
+                                        <option value="male" selected>Чоловіча</option>
+                                        <option value="female">Жіноча</option>
+                                        <option value="other">Інше</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="height">Зріст (см)</label>
+                                    <input type="number" id="height" name="height" class="form-control" value="180" min="100" max="250">
+                                </div>
+                                <div class="form-group">
+                                    <label for="target-weight">Цільова вага (кг)</label>
+                                    <input type="number" id="target-weight" name="target-weight" class="form-control" value="72" min="30" max="200" step="0.1">
+                                </div>
+                            </div>
+                        </section>
+
+                        <section id="settings" class="form-card">
+                            <h2>Налаштування</h2>
+                            <div class="form-group">
+                                <label for="language">Мова інтерфейсу</label>
+                                <select id="language" name="language" class="form-control">
+                                    <option value="uk" selected>Українська</option>
+                                    <option value="en">English</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="units">Одиниці виміру</label>
+                                <select id="units" name="units" class="form-control">
+                                    <option value="metric" selected>Метрична система (кг, см)</option>
+                                    <option value="imperial">Імперська система (lb, ft)</option>
+                                </select>
+                            </div>
+                            <div class="form-group form-checkbox">
+                                <input type="checkbox" id="notifications" name="notifications" class="form-control" checked>
+                                <label for="notifications">Отримувати нагадування про введення даних</label>
+                            </div>
+                        </section>
+
+                        <section id="security" class="form-card">
+                            <h2>Безпека</h2>
+                            <div class="form-group">
+                                <label for="current-password">Поточний пароль</label>
+                                <input type="password" id="current-password" name="current-password" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="new-password">Новий пароль</label>
+                                <input type="password" id="new-password" name="new-password" class="form-control" minlength="8">
+                            </div>
+                            <div class="form-group">
+                                <label for="confirm-new-password">Підтвердіть новий пароль</label>
+                                <input type="password" id="confirm-new-password" name="confirm-new-password" class="form-control">
+                            </div>
+                        </section>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">Зберегти зміни</button>
+                        </div>
+                    </form>
+
+                    <section id="delete" class="form-card danger-zone">
+                        <h2>Видалення акаунту</h2>
+                        <p>Увага! Видалення акаунту є незворотною дією. Всі ваші дані будуть видалені назавжди.</p>
+                        <button class="btn btn-danger">Видалити акаунт</button>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 HealthTrack AI. Всі права захищено.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,249 @@
+/* ============================================
+   BASE.CSS - Базові стилі, змінні, типографіка
+   HealthTrack AI - Брендбук
+   ============================================ */
+
+/* === CSS Variables (Брендбук) === */
+:root {
+    /* Primary Colors */
+    --color-primary: #00A8A8;
+    --color-primary-hover: #008C8C;
+    --color-primary-light: #E8F5F5;
+    --color-primary-dark: #007575;
+    
+    /* Text Colors */
+    --color-text: #1A1A2E;
+    --color-text-light: #6B7280;
+    --color-text-muted: #9CA3AF;
+    --color-text-white: #FFFFFF;
+    
+    /* Background Colors */
+    --color-bg: #FFFFFF;
+    --color-bg-gray: #F0F4F8;
+    --color-bg-dark: #1A1A2E;
+    
+    /* Status Colors */
+    --color-success: #16C79A;
+    --color-success-light: #E8F5F0;
+    --color-warning: #FFD93D;
+    --color-warning-light: #FFF8E5;
+    --color-danger: #FF6B6B;
+    --color-danger-light: #FFE5E5;
+    --color-info: #4A90D9;
+    --color-info-light: #E5F0FF;
+    
+    /* Fonts (Брендбук) */
+    --font-main: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-heading: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-data: 'Space Grotesk', 'SF Mono', monospace;
+    
+    /* Spacing Scale */
+    --space-xs: 0.25rem;   /* 4px */
+    --space-sm: 0.5rem;    /* 8px */
+    --space-md: 1rem;      /* 16px */
+    --space-lg: 1.5rem;    /* 24px */
+    --space-xl: 2rem;      /* 32px */
+    --space-2xl: 3rem;     /* 48px */
+    --space-3xl: 4rem;     /* 64px */
+    
+    /* Border Radius */
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+    --radius-full: 50%;
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+    --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.15);
+    
+    /* Transitions */
+    --transition-fast: 0.15s ease;
+    --transition-base: 0.25s ease;
+    --transition-slow: 0.4s ease;
+    
+    /* Z-Index Scale */
+    --z-dropdown: 100;
+    --z-sticky: 200;
+    --z-fixed: 300;
+    --z-modal-backdrop: 400;
+    --z-modal: 500;
+    --z-tooltip: 600;
+}
+
+/* === Reset === */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    font-family: var(--font-main);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* === Typography === */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    line-height: 1.25;
+    color: var(--color-text);
+    margin-bottom: var(--space-md);
+}
+
+h1 {
+    font-size: clamp(2rem, 5vw, 2.75rem);
+    letter-spacing: -0.02em;
+}
+
+h2 {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    letter-spacing: -0.01em;
+}
+
+h3 {
+    font-size: clamp(1.25rem, 3vw, 1.5rem);
+}
+
+h4 {
+    font-size: 1.125rem;
+}
+
+p {
+    margin-bottom: var(--space-md);
+    color: var(--color-text-light);
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+/* === Links === */
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+a:hover {
+    color: var(--color-primary-hover);
+}
+
+a:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+}
+
+/* === Lists === */
+ul, ol {
+    list-style: none;
+}
+
+.content-list {
+    padding-left: var(--space-lg);
+}
+
+.content-list li {
+    position: relative;
+    padding-left: var(--space-md);
+    margin-bottom: var(--space-sm);
+}
+
+.content-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.6em;
+    width: 6px;
+    height: 6px;
+    background-color: var(--color-primary);
+    border-radius: var(--radius-full);
+}
+
+/* === Images === */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* === Selection === */
+::selection {
+    background-color: var(--color-primary-light);
+    color: var(--color-primary-dark);
+}
+
+/* === Scrollbar (Webkit) === */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-bg-gray);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-primary);
+    border-radius: var(--radius-sm);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-primary-hover);
+}
+
+/* === Focus States === */
+:focus {
+    outline: none;
+}
+
+:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+/* === Utility Classes === */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+.text-primary { color: var(--color-primary); }
+.text-success { color: var(--color-success); }
+.text-warning { color: var(--color-warning); }
+.text-danger { color: var(--color-danger); }
+.text-muted { color: var(--color-text-muted); }
+
+.bg-primary { background-color: var(--color-primary); }
+.bg-gray { background-color: var(--color-bg-gray); }
+.bg-dark { background-color: var(--color-bg-dark); }
+
+.font-data { font-family: var(--font-data); }

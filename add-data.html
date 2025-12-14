@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Додати дані - HealthTrack AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page-wrapper dashboard-page">
+    <header class="header">
+        <div class="container">
+            <a href="dashboard.html" class="logo"><img src="images/logo.svg" alt=""><span>HealthTrack AI</span></a>
+            <button class="menu-toggle" aria-label="Меню"><span></span><span></span><span></span></button>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="dashboard.html" class="nav-link">Дашборд</a></li>
+                    <li><a href="add-data.html" class="nav-link active">Додати дані</a></li>
+                    <li><a href="history.html" class="nav-link">Історія</a></li>
+                    <li><a href="profile.html" class="nav-link">Профіль</a></li>
+                    <li><a href="index.html" class="nav-link">Вийти</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="dashboard-main">
+        <div class="container container-sm">
+            <div class="page-header">
+                <h1>Додати показники</h1>
+                <p>Внесіть ваші показники здоров'я за сьогодні</p>
+            </div>
+
+            <form class="data-form" action="#" method="POST" novalidate>
+                <div class="form-card">
+                    <h2>📅 Дата і час</h2>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="date">Дата</label>
+                            <input type="date" id="date" name="date" class="form-control" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="time">Час</label>
+                            <input type="time" id="time" name="time" class="form-control" class="form-control" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-card">
+                    <h2>❤️ Показники здоров'я</h2>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="pulse">Пульс (уд/хв)</label>
+                            <input type="number" id="pulse" name="pulse" class="form-control" class="form-control" placeholder="72" min="40" max="200">
+                            <span class="error-message"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="steps">Кроки</label>
+                            <input type="number" id="steps" name="steps" class="form-control" class="form-control" placeholder="10000" min="0" max="100000">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="sleep">Сон (годин)</label>
+                            <input type="number" id="sleep" name="sleep" class="form-control" class="form-control" placeholder="8" min="0" max="24" step="0.5">
+                        </div>
+                        <div class="form-group">
+                            <label for="weight">Вага (кг)</label>
+                            <input type="number" id="weight" name="weight" class="form-control" class="form-control" placeholder="70.5" min="30" max="300" step="0.1">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-card">
+                    <h2>😊 Настрій</h2>
+                    <div class="mood-selector">
+                        <input type="radio" id="mood-1" name="mood" class="form-control" value="1">
+                        <label for="mood-1" class="mood-option">😢</label>
+                        <input type="radio" id="mood-2" name="mood" class="form-control" value="2">
+                        <label for="mood-2" class="mood-option">😕</label>
+                        <input type="radio" id="mood-3" name="mood" class="form-control" value="3">
+                        <label for="mood-3" class="mood-option">😐</label>
+                        <input type="radio" id="mood-4" name="mood" class="form-control" value="4" checked>
+                        <label for="mood-4" class="mood-option">🙂</label>
+                        <input type="radio" id="mood-5" name="mood" class="form-control" value="5">
+                        <label for="mood-5" class="mood-option">😊</label>
+                    </div>
+                </div>
+
+                <div class="form-card">
+                    <h2>📝 Нотатки</h2>
+                    <div class="form-group">
+                        <textarea id="notes" name="notes" class="form-control" class="form-control" rows="4" placeholder="Додаткові нотатки про ваше самопочуття..."></textarea>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <a href="dashboard.html" class="btn btn-secondary">Скасувати</a>
+                    <button type="submit" class="btn btn-primary">Зберегти</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container"><div class="footer-bottom"><p>&copy; 2025 HealthTrack AI</p></div></div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
